@@ -1,0 +1,29 @@
+.home-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .home-header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .home-info {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .explore-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .explore-button:hover {
+    background-color: #218838;
+  }
+  

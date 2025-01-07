@@ -1,0 +1,17 @@
+.register {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .register input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .register button {
+    width: 100%;
+  }
+  

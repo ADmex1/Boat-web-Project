@@ -1,0 +1,110 @@
+.boats-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 2rem;
+}
+
+.boats-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.boats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 100%;
+}
+
+.boat-card {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.boat-card:hover {
+  transform: translateY(-5px);
+}
+
+.boat-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.boat-info {
+  padding: 1.5rem;
+}
+
+.boat-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.capacity {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.details-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #0052a3;
+}
+
+/* Hide scrollbar but keep functionality */
+.boats-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.boats-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.boats-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.boats-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .boats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .boats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  
