@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Boat;
+use App\Models\Boats;
 use Illuminate\Http\Request;
 
 class BoatController extends Controller
 {
     public function index()
     {
-        $boats = Boat::with('reviews')->get();
+        $boats = Boats::with('reviews')->get();
         return response()->json([
             'status' => 'success',
             'boats' => $boats
@@ -18,7 +18,7 @@ class BoatController extends Controller
 
     public function show($id)
     {
-        $boat = Boat::with('reviews')->findOrFail($id);
+        $boat = Boats::with('reviews')->findOrFail($id);
         return response()->json([
             'status' => 'success',
             'boat' => $boat
@@ -34,7 +34,7 @@ class BoatController extends Controller
             'image' => 'required|string'
         ]);
 
-        $boat = Boat::create($request->all());
+        $boat = Boats::create($request->all());
         return response()->json([
             'status' => 'success',
             'message' => 'Boat created successfully',
@@ -44,7 +44,7 @@ class BoatController extends Controller
 
     public function update(Request $request, $id)
     {
-        $boat = Boat::findOrFail($id);
+        $boat = Boats::findOrFail($id);
         $boat->update($request->all());
 
         return response()->json([
@@ -56,7 +56,7 @@ class BoatController extends Controller
 
     public function destroy($id)
     {
-        $boat = Boat::findOrFail($id);
+        $boat = Boats::findOrFail($id);
         $boat->delete();
 
         return response()->json([

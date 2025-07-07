@@ -55,4 +55,4 @@ class BoatSeeder extends Seeder
             ]
         ]);
     }
-} 
+}
